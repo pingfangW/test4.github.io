@@ -1,53 +1,49 @@
-# 预览
+# Ascent
 
-| ![首页（书架）](./cover/1.png) | ![分类页（目录）](./cover/2.png) |
-| :----------------------------: | :------------------------------: |
-|          首页（书架）          |          分类页（目录）          |
-|    ![文章页](./cover/3.png)    |     ![归档页](./cover/4.png)     |
-|             文章页             |              归档页              |
+An opinionated Hexo theme for blogs with long blocks of text. [Demo.](https://cjquines.github.io/hexo-theme-ascent/)
 
-# 主题逻辑
+[![](sample.png)](https://cjquines.github.io/hexo-theme-ascent/)
 
-| 对应博客逻辑 | 对应书的关系 |
-| ------------ | ------------ |
-| 首页         | 书架         |
-| 一个分类     | 一本书       |
-| 分类详情页   | 目录         |
-| 一篇文章     | 目录中的一条 |
+It's best suited for blogs with a lot of longform writing, and it's designed to give the reader as smooth of a reading experience as possible. I wrote Ascent because it seemed that none of the Hexo themes available had this aim; unlike most Hexo themes, the focus of Ascent is to make posts that read like magazine articles or newspaper features.
 
-# 演示
+Read more about Ascent design [on the demo](https://cjquines.github.io/hexo-theme-ascent/2020/05/18/Ascent/). See how Ascent formats Markdown [on the demo](https://cjquines.github.io/hexo-theme-ascent/2020/05/18/Demo/).
 
-欢迎将你的网站提交到这里来 [点我提交演示站点](https://github.com/Yet-The-Books/hexo-theme-yet-the-books/discussions/12) 或 [直接编辑（推荐）](https://github.com/Yet-The-Books/hexo-theme-yet-the-books/edit/main/README.md)
+## Installation
 
-| 站点                                  | 状态                                                         |
-| ------------------------------------- | ------------------------------------------------------------ |
-| [陆本为](https://books.nexmoe.com/)       | ![陆本为](https://img.shields.io/website?url=https://books.nexmoe.com/) |
-| [三味书屋](https://zain-books.vercel.app/)       | ![三味书屋](https://img.shields.io/website?url=https://zain-books.vercel.app/) |
-
-
-# 使用
-使用下面的命令进行安装（安装完就可以直接用了
-
-```shell
-npm i hexo-theme-yet-the-books
+```bash
+npm install -g hexo-cli
+hexo init <site>
+cd <site>
+git clone https://github.com/cjquines/hexo-theme-ascent themes/ascent
 ```
 
-配置主题请更改根目录文件 _config.yet-the-books.yml
+Then set your `theme` in `_config.yml` to `ascent`.
 
-注意：使用本主题，你的文章必须得有一个分类
+## Configuration
 
-# 使用示例
-https://github.com/nexmoe/books
+Here's what can be changed in `themes/ascent/_config.yml`:
 
-# Front-matter
+* `menu`. Header links can be customized by adding more keys inside `menu`:
 
-| 参数       | 描述                                                       | 默认值         |
-| :--------- | :--------------------------------------------------------- | :------------- |
-| `cover`    | 封面，需为图片目录或链接                                   | null           |
-| `order_by` | 目录根据文章的什么排序（可选值：date,-date,title,url,...） | theme.order_by |
-| `color`    | 封面颜色（可选值：red,purple,gray,blue,green）             | red            |
+```yaml
+menu:
+  Home: /
+  Archives: /archives
+  Github: https://github.com/cjquines
+```
 
-其他：https://hexo.io/zh-cn/docs/front-matter
+* `rss`. Link to the generated RSS. You need to have `hexo-generator-feed` installed, which you can do with `npm install hexo-generator-feed`.
 
-# 社区
-主题交流群：[🌙 还有书籍主题](https://jq.qq.com/?_wv=1027&k=4sLtwk78)
+* `excerpt_link`. The text of the "read more" link in the home page.
+
+* `favicon`. Path to the favicon.
+
+* `settings`. Toggles whether the settings (sans-serif/serif, light/dark) appear in the lower-right corner of the screen.
+
+* `highlight`. Toggles whether code blocks are styled. Changing this to `false` improves performance by a little bit.
+
+* `word_count`. Toggles whether word counts appear before a post, and in the archives. You need to have `hexo-wordount` installed, which you can do with `npm install hexo-wordcount`.
+
+* `google_analytics`. The `enable` key toggles whether Google Analytics is turned on. Replace `UA-000000000-0` with your Google Analytics tracking ID, which you can find in the Google Analytics code.
+
+* `intensedebate`. The `enable` key toggles whether IntenseDebate comments are turned on. Replace `00000000000000000000000000000000` with the IntenseDebate site account, which you can find in Settings > Account > Site Key.

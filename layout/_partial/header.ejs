@@ -1,10 +1,18 @@
-<div class="header <% if(is_home()){ %>home<% } %> ">
-    <div class="container">
-        <a class="logo" href="<%- url_for() %>" title="<%= config.title%>"><%= config.title%></a>
-        <ul class="nav">
-            <% for (name in theme.menu) { %>
-                <li class="nav-item"><a href="<%- url_for(theme.menu[name]) %>"><%= name %></a></li>
-            <% } %>
-        </ul>
-    </div>
-</div>
+<header id="header">
+  <h1 id="title">
+    <a href="<%- url_for() %>"><%= config.title %></a>
+  </h1>
+  <nav>
+    <% var keys = Object.keys(theme.menu); %>
+    <% for (var i = 0; i < keys.length; i++){ %>
+      <% if (i !== 0){ %>
+        <span class="nav-spacer">×</span>
+      <% } %>
+      <a class="nav-link" href="<%- url_for(theme.menu[keys[i]]) %>"><%= keys[i] %></a>
+    <% } %>
+    <% if (theme.rss){ %>
+      <span class="nav-spacer">×</span>
+      <a class="nav-link" href="<%- url_for(theme.rss) %>"><%= __('rss_feed') %></a>
+    <% } %>
+  </nav>
+</header>
