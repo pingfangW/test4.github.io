@@ -1,24 +1,29 @@
 {
-	"name": "hexo-theme-yet-the-books",
-	"version": "1.3.4",
-	"description": "🌙 It starts with the appearance and stays true to the words. A blog theme dedicated to those who love to think.",
-	"keywords": [
-		"hexo",
-		"theme",
-		"yet-the-books"
-	],
-	"author": "Nexmoe (https://github.com/nexmoe)",
-	"license": "MIT",
-	"main": "index.js",
-	"scripts": {
-		"postinstall": "node ./move_config.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/Yet-The-Books/hexo-theme-yet-the-books.git"
-	},
-	"bugs": {
-		"url": "https://github.com/Yet-The-Books/hexo-theme-yet-the-books/issues"
-	},
-	"homepage": "https://github.com/Yet-The-Books/hexo-theme-yet-the-books"
+  "name": "gullp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ff",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "graceful-fs": "^4.1.15",
+    "gulp-connect": "^5.7.0",
+    "gulp-html": "^0.5.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "hexo-render-pug": "^2.0.0",
+    "path-root-regex": "^0.1.2",
+    "pug": "^2.0.3",
+    "replace-ext": "^1.0.0",
+    "user-home": "^2.0.0"
+  }
 }

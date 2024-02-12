@@ -1,30 +1,36 @@
-# Header
-menu:
-  Home: /
-  Archives: /archives
-# rss: /atom.xml
+name: Hive
+url: https://github.com/Farnaziifz
+  
+theme:
+  favicon: images/favicon.png
 
-# Content
-excerpt_link: read more
+# Comment
+# e.g disqus: seansun
+disqus:
 
-# Favicon
-# favicon: /favicon.ico
-
-# Settings toggle
-settings: true
-
-# Code CSS toggle
-highlight: true
-
-# Word count (needs hexo-wordcount)
-word_count: false
-
-# Google Analytics
+# Analytics
+mathjax: false
 google_analytics:
-  enable: false
-  acct: "UA-000000000-0"
 
-# IntenseDebate ID
-intensedebate:
-  enable: false
-  acct: "00000000000000000000000000000000"
+# Copyright Infomation
+copyright:
+  since:
+  name:
+  url:
+
+#theme_config
+menu:
+  - page: home
+    directory: /
+  - page: archive
+    directory: /archives/
+  - page: rss
+    directory: /atom.xml
+  - page: github
+    directory: https://github.com/farnaziifz
+
+footer:
+  - item: contact-us
+    directory: /contact-us
+  - item: about-us
+    directory: /about-us
